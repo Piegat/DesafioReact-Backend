@@ -23,6 +23,9 @@ public class UserEntity {
     private String nome;
 
     @NotNull
+    private String username;
+
+    @NotNull
     private String email;
 
     @NotNull
@@ -109,4 +112,19 @@ public class UserEntity {
         this.senha = senha;
     }
 
+    public @NotNull String getUsername() {
+        return username;
+    }
+
+    public void setUsername(@NotNull String username) {
+        this.username = username;
+    }
+
+    public @NotNull Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(@NotNull Boolean active) {
+        isActive = active;
+    }
 }

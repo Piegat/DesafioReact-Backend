@@ -9,6 +9,7 @@ public class UserDTO {
     private Boolean isActive;
     private String email;
     private String telefone;
+    private String username;
     private RolesEnum role;
     private String senha;
 
@@ -33,6 +34,7 @@ public class UserDTO {
                 ", isActive=" + isActive +
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
+                ", username = '" + username + '\'' +
                 ", senha='" + senha + '\'' +
                 ", telefone='" + telefone + '\'' +
                 ", role=" + role +
@@ -41,6 +43,22 @@ public class UserDTO {
 
     public Long getId() {
         return id;
+    }
+
+    public Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(Boolean active) {
+        isActive = active;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setId(Long id) {

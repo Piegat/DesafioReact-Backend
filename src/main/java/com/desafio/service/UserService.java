@@ -43,8 +43,9 @@ public class UserService {
 
         int count = userRepository.countActiveUsers();
 
-        Assert.isTrue(count < 5, "Já existe 5 usuários ativos");
-
+        if (userEntity.getActive()) {
+            Assert.isTrue(count < 5, "Já existe 5 usuários ativos");
+        }
         userEntity = userRepository.save(userEntity);
         return modelMapper.map(userEntity, UserDTO.class);
     }
